@@ -1,6 +1,6 @@
 ---
+blog: true
 collections: 编程中的那些问题
-share: true
 tags:
   - ubuntu
   - 远程桌面
@@ -8,7 +8,7 @@ tags:
 categories: 
 title: Authentication required. System policy prevents WiFi scans 问题的解决
 date: 2024-08-01 23:41:21
-update: 2024-08-08 01:15:32
+update: 2024-08-08 01:21:46
 ---
 
 ## 问题描述
