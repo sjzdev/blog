@@ -1,8 +1,0 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-  <channel>
-    <title>Categories - 分类 - 纸上谈兵</title>
-    <link>http://localhost:1313/categories/</link>
-    <description>Categories - 分类 | 纸上谈兵</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>changliangliang1996@foxmail.com (酸橘子)</managingEditor>
-      <webMaster>changliangliang1996@foxmail.com (酸橘子)</webMaster><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /></channel>
-</rss>

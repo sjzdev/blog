@@ -120,7 +120,7 @@ defaultContentLanguage = 'zh-cn'
     [params.home.profile]
       enable = true
       gravatarEmail = ""
-      avatarURL = "/img/avatar.png"
+      avatarURL = "img/avatar.png"
       avatarMenu = ""
       title = "纸上谈兵"
       subtitle = ""
