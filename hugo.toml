@@ -3,6 +3,8 @@ languageCode = 'zh-cn'
 title = '纸上谈兵'
 defaultContentLanguage = 'zh-cn'
 
+[taxonomies]
+  collection = "collections"
 [module]
   [[module.imports]]
     path = "github.com/hugo-fixit/FixIt"
