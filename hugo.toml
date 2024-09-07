@@ -1,10 +1,12 @@
-baseURL = 'https://sjzdev.github.io/blog/'
+baseURL = 'https://sjzdev.github.io/blog'
 languageCode = 'zh-cn'
-title = '纸上谈兵'
+title = '中央情报橘'
 defaultContentLanguage = 'zh-cn'
 
 [taxonomies]
   collection = "collections"
+  tag = "tags"
+  category = "categories"
 [module]
   [[module.imports]]
     path = "github.com/hugo-fixit/FixIt"
@@ -33,14 +35,14 @@ defaultContentLanguage = 'zh-cn'
     desktopMode = "sticky"
     mobileMode = "auto"
     [params.header.title]
-      logo = ""
-      name = "纸上谈兵"
+      logo = "/img/avatar.png"
+      name = "中央情报橘"
       pre = ""
       post = ""
       typeit = false
     [params.header.subtitle]
-      name = "不厌诈"
-      typeit = true
+      name = ""
+      typeit = false
 
   [params.search]
     enable = true
@@ -122,7 +124,7 @@ defaultContentLanguage = 'zh-cn'
       gravatarEmail = ""
       avatarURL = "img/avatar.png"
       avatarMenu = ""
-      title = "纸上谈兵"
+      title = "酸橘子"
       subtitle = ""
       typeit = true
       social = true
@@ -544,6 +546,19 @@ defaultContentLanguage = 'zh-cn'
       #  是否显示子菜单项分割线
       divided = false
   [[menu.main]]
+    identifier = "categories"
+    #  父级菜单项的标识符 (identifier)
+    parent = ""
+    # 你可以在名称（允许 HTML 格式）之前添加其他信息，例如图标
+    pre = ""
+    # 你可以在名称（允许 HTML 格式）之后添加其他信息，例如图标
+    post = ""
+    name = "分类"
+    url = "/categories/"
+    # 当你将鼠标悬停在此菜单链接上时，将显示的标题
+    title = ""
+    weight = 10
+  [[menu.main]]
     identifier = "archives"
     #  父级菜单项的标识符 (identifier)
     parent = ""
@@ -555,7 +570,32 @@ defaultContentLanguage = 'zh-cn'
     url = "/archives/"
     # 当你将鼠标悬停在此菜单链接上时，将显示的标题
     title = ""
-    weight = 1
+    weight = 2
+    #  向菜单项添加用户定义的内容
+    [menu.main.params]
+      # 添加 CSS 类到菜单项
+      class = ""
+      # 是否为草稿菜单，类似草稿页面
+      draft = false
+      #  添加 fontawesome 图标到菜单项
+      icon = ""
+      #  设置菜单项类型，可选值：["mobile", "desktop"]
+      type = ""
+      #  是否显示子菜单项分割线
+      divided = false
+  [[menu.main]]
+    identifier = "tags"
+    #  父级菜单项的标识符 (identifier)
+    parent = ""
+    # 你可以在名称（允许 HTML 格式）之前添加其他信息，例如图标
+    pre = ""
+    # 你可以在名称（允许 HTML 格式）之后添加其他信息，例如图标
+    post = ""
+    name = "标签"
+    url = "/tags/"
+    # 当你将鼠标悬停在此菜单链接上时，将显示的标题
+    title = ""
+    weight = 2
     #  向菜单项添加用户定义的内容
     [menu.main.params]
       # 添加 CSS 类到菜单项
