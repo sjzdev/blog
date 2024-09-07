@@ -35,7 +35,7 @@ defaultContentLanguage = 'zh-cn'
     desktopMode = "sticky"
     mobileMode = "auto"
     [params.header.title]
-      logo = "/img/avatar.png"
+      logo = "img/avatar.png"
       name = "中央情报橘"
       pre = ""
       post = ""
