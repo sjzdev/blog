@@ -8,14 +8,14 @@ categories:
 collections: 
 title: 解决 Pycharm 热加载 fastapi 过慢
 date: 2024-07-13 19:23:14
-update: 2024-08-25 16:00:02
+update: 2024-09-08 00:00:23
 ---
 
 ## 问题描述
 
 使用 pycharm 启动 fastapi 后，热加载时卡在如下位置很久：
 
-![](img/IMG-20240816224818361.png)
+![](/img/IMG-20240816224818361.png)
 
 ## 解决方案
 
