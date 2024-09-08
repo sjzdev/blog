@@ -8,13 +8,13 @@ categories:
   - ucore实验
 collections: 
 title: ucore操作系统实验：lab1-练习1
-date: 2024-03-31 00:32:27
-update: 2024-09-08 00:00:34
+date: 2022-03-02 00:32:27
+update: 2024-09-08 21:39:36
 ---
 
 ## 练习内容
 
-![](/blog/img/ucore操作系统实验：lab1-练习1_image_1.png)
+![](/blog/img/IMG-20240908212558389.png)
 
 ## 问题解答
 
@@ -25,9 +25,9 @@ update: 2024-09-08 00:00:34
 - `make clean` 清除掉上一次生成的文件
 - `make V=` 编译文件生成镜像
 
-![](/blog/img/ucore操作系统实验：lab1-练习1_image_2.png)
+![](/blog/img/IMG-20240908212558552.png)
 
-![](/blog/img/ucore操作系统实验：lab1-练习1_image_3.png)
+![](/blog/img/IMG-20240908212559283.png)
 
 执行 `make V=` 的过程中全部输出如下，它显示了整个过程中执行的所有命令：
 
@@ -129,19 +129,19 @@ dd if=bin/kernel of=bin/ucore.img seek=1 conv=notrunc
 
 引导扇区的大小为 512 字节，位于磁盘的第一个扇区，但是不是所有的磁盘都装有操作系统，所以统一规定将这 512 个字节的最后两个字节设置为标志位，取固定值 `0x55` 和 `0xAA`。
 
-![](/blog/img/ucore操作系统实验：lab1-练习1_image_4.png)
+![](/blog/img/IMG-20240908212559765.png)
 
 从实验文档中可以得知，`bin/sign` 是用来生成硬盘主引导扇区的程序，如果想从 `make` 的输出内容中看到这一步骤，可以对 `Makefile` 文件中 `bootblock` 部分进行修改。
 
-![](/blog/img/ucore操作系统实验：lab1-练习1_image_5.png)
+![](/blog/img/IMG-20240908212600161.png)
 
 修改后的内容如下：
 
-![](/blog/img/ucore操作系统实验：lab1-练习1_image_6.png)
+![](/blog/img/IMG-20240908212600482.png)
 
 这时候在执行 `make "V="` 命令，可以在输出看到多出了一部分内容，其中 `bin/sign obj/bootblock.out bin/bootblock` 就是利用 `bin/sign` 来构造引导扇区。
 
-![](/blog/img/ucore操作系统实验：lab1-练习1_image_7.png)
+![](/blog/img/IMG-20240908212600572.png)
 
 `bin/sign` 对应的源码位于 `tools/sigh.c` ，内容如下：
 
