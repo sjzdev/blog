@@ -5,7 +5,7 @@ categories:
 collections: 
 title: Flutter开发环境搭建
 date: 2024-09-21 20:46:04
-update: 2024-11-01 21:31:19
+update: 2024-11-01 21:44:55
 ---
 
 > [!note]
@@ -15,20 +15,20 @@ update: 2024-11-01 21:31:19
 
 ### 配置 Android sdk
 1. 在设置 -->语言和框架 -->Android SDK 中配置安装位置，选择安装 SDK；
-	![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220021173.png)
+	![](/blog/img/IMG-20241101214529351.png)
 	安装成功后，可以继续选择安装其他的平台和工具：
-	![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220021220.png)
+	![](/blog/img/IMG-20241101214529454.png)
 3. 安装 Command-line 和 platform-tools：
-	![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220021273.png)
+	![](/blog/img/IMG-20241101214529507.png)
 4. 将 Android SDK 的安装路径配置到 PATH 环境变量中：
-	![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220021326.png)
-	![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220021376.png)
+	![](/blog/img/IMG-20241101214529570.png)
+	![](/blog/img/IMG-20241101214529624.png)
 
 ### 插件安装
 
 设置 -->插件中搜索安装 Dart 和 Flutter 两个插件：
 
-![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220021422.png)
+![](/blog/img/IMG-20241101214529693.png)
 
 ## Flutter SDK 安装
 
@@ -50,7 +50,7 @@ update: 2024-11-01 21:31:19
 	PUB_HOSTED_URL="https://mirrors.tuna.tsinghua.edu.cn/dart-pub"
 	```
 3. 之后执行 `flutter doctor` 命令检查我们的环境是否配置成功；
-	![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220021471.png)
+	![](/blog/img/IMG-20241101214529755.png)
 ### flutter doctor 问题解决
 
 执行 `flutter doctor` 命令的检查结果中可能会出现一些问题，接下来我们解决这些问题。
@@ -74,10 +74,10 @@ update: 2024-11-01 21:31:19
 ## 创建项目
 
 1. IDEA 新建 Flutter 项目：
-	![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220021516.png)
-	![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220021562.png)
+	![](/blog/img/IMG-20241101214529810.png)
+	![](/blog/img/IMG-20241101214529854.png)
 2. 启动运行可以看到结果：
-	![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220021607.png)
+	![](/blog/img/IMG-20241101214529905.png)
 
 
 ## 连接真机
@@ -86,27 +86,27 @@ update: 2024-11-01 21:31:19
 
 1. 使用数据线连接手机和电脑；
 2. 开始手机 USB 调试功能，并且允许 USB 安装；
-	![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220021659.jpg)
-	![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220021789.jpg)
+	![](/blog/img/IMG-20241101214529960.jpg)
+	![](/blog/img/IMG-20241101214530009.jpg)
 3. 之后 IDEA 会自动连接到手机，可以在选项中看到；
-	![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220021839.png)
+	![](/blog/img/IMG-20241101214530098.png)
 4. 启动程序，过一段时间就会在手机上看到允许安装的请求，允许安装后就可以在手机运行程序了：
-	![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220021891.jpg)
+	![](/blog/img/IMG-20241101214530153.jpg)
 
 ### 问题解决
 
 **问题 1：启动程序后卡在如下位置**
 
-![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220021949.png)
+![](/blog/img/IMG-20241101214530195.png)
 
 这个问题大概率是 Gradle 下载不下来引起的，可以在启动配置中添加 `-v` 参数，打印出来的更详细的日志：
 
-![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220022010.png)
+![](/blog/img/IMG-20241101214530238.png)
 
-![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220022064.png)
+![](/blog/img/IMG-20241101214530287.png)
 
 解决方案是替换 gradle 的下载地址，可以使用腾讯提供的服务 (`https://mirrors.cloud.tencent.com/gradle`)，选择对应的版本替换链接，将如下文件里的 `distributionUrl` 配置替换掉即可。
 
-![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220022114.png)
+![](/blog/img/IMG-20241101214530334.png)
 
-![](/blog/img/01-项目/技术栈学习/flutter学习笔记/Flutter开发环境搭建/IMG-20240713220022170.png)
+![](/blog/img/IMG-20241101214530371.png)
